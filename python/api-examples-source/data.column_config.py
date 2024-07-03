@@ -88,15 +88,9 @@ column_configuration = {
         help="The user's birthdate",
         min_value=date(1920, 1, 1),
     ),
-    #"email": st.column_config.TextColumn(
-    #    "Email",
-    #    help="The user's email address",
-    #    validate="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
-    #),
-    "email": st.column_config.LinkColumn(
+    "email": st.column_config.TextColumn(
         "Email",
         help="The user's email address",
-        display_text="%",
         validate="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
     ),    
 }
