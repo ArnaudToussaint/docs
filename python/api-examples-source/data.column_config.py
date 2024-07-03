@@ -88,14 +88,21 @@ column_configuration = {
         help="The user's birthdate",
         min_value=date(1920, 1, 1),
     ),
-    "email": st.column_config.TextColumn(
+    #"email": st.column_config.TextColumn(
+    #    "Email",
+    #    help="The user's email address",
+    #    validate="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
+    #),
+    "email": st.column_config.LinkColumn(
         "Email",
         help="The user's email address",
+        format="mailto:%d",
+        display_text="%d",
         validate="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
-    ),
+    ),    
 }
 
-st.data_editor(
+st.data_editor( 
     get_profile_dataset(),
     column_config=column_configuration,
     use_container_width=True,
