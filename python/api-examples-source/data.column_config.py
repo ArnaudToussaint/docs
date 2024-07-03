@@ -96,7 +96,7 @@ column_configuration = {
     "email": st.column_config.LinkColumn(
         "Email",
         help="The user's email address",
-        display_text="%d",
+        display_text="%",
         validate="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
     ),    
 }
